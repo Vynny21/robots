@@ -1,0 +1,8 @@
+{
+  "name": "robots",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Vynny21/robots.git",
+  "author": "vynny21 <vynnyprudencio@gmail.com>",
+  "license": "MIT"
+}
