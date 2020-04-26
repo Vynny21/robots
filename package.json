@@ -4,5 +4,8 @@
   "main": "index.js",
   "repository": "https://github.com/Vynny21/robots.git",
   "author": "vynny21 <vynnyprudencio@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
 }
