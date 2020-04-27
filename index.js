@@ -5,7 +5,9 @@ const robots = {
 
 //Orquestrador
 async function start(){
-  const content = {}
+  const content = {
+    maximumSentences: 7
+  }
 
   //Retorno das funções nas propriedades e depois elas retornam no objeto content
   content.searchTerm = askAndReturnSearchTerm();
@@ -25,10 +27,10 @@ async function start(){
     const selectedPrefixIndex = readline.keyInSelect(prefixes, 'Choose one option:');
     const selectedPrefixText = prefixes[selectedPrefixIndex];
 
-    console.log(selectedPrefixText)
+    return selectedPrefixText
   }
 
-  console.log(content)
+  console.log(JSON.stringify(content, null, 4))
 }
 
 start()
