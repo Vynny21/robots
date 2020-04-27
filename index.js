@@ -1,12 +1,18 @@
 const readline = require('readline-sync');
+const robots = {
+  text: require('./src/robots/text')
+}
 
 //Orquestrador
-function start(){
+async function start(){
   const content = {}
 
-  //Retorno das funções nas propriedades e depois retornaram no array content
+  //Retorno das funções nas propriedades e depois elas retornam no objeto content
   content.searchTerm = askAndReturnSearchTerm();
   content.prefix = askAndReturnPrefix();
+
+  //Inicializar os robos passando o content dentro da função base do robô
+  await robots.text(content)
 
   //Ler a resposta do input
   function askAndReturnSearchTerm() {

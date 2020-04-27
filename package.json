@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "robots",
   "version": "1.0.0",
   "main": "index.js",
@@ -7,5 +8,11 @@
   "license": "MIT",
   "dependencies": {
     "readline-sync": "^1.4.10"
+=======
+  "dependencies": {
+    "algorithmia": "^0.3.10",
+    "readline-sync": "^1.4.10",
+    "sbd": "^1.0.18"
+>>>>>>> cf4e22dd3e360fe31552ee56d9a5ab77842673d3
   }
 }
