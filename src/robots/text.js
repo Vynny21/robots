@@ -58,6 +58,7 @@ async function robot(content) {
   }
 
   function removeDatesInParentheses(text) {
+    // eslint-disable-next-line no-regex-spaces
     return text.replace(/\((?:\([^()]*\)|[^()])*\)/gm, '').replace(/  /g,' ')
   }
 
@@ -100,14 +101,15 @@ async function robot(content) {
           keywords: {}
         }
       }, (error, response) => {
-        if(error) {
-          throw error
+        if (error) {
+          reject(error)
+          return
         }
-  
-        const keywords = response.keywords.map((keyword) => {
+
+        const keywords = response.result.keywords.map((keyword) => {
           return keyword.text
         })
-  
+
         resolve(keywords)
       })
     })
